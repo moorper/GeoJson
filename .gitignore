@@ -1,6 +1,48 @@
-composer.phar
-/vendor/
+# global
+# =========================
 
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
+!.gitignore
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might appear on external disk
+# =========================
+
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+# =========================
+
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+# =========================
+
+Desktop.ini
+
+# Recycle Bin used on file shares
+# =========================
+
+$RECYCLE.BIN/
+
+# 编辑器
+# =========================
+
+.vscode
+.idea
+*.sw*
+*.un~
+
+# php
+# =========================
+
+/vendor
+/composer.lock
+/.php_cs.cache
