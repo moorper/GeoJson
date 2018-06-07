@@ -8,7 +8,7 @@ class Feature extends GeoJson
 {
     private $type;
     public $properties;
-    private $geometry;
+    public $geometry;
 
     public function __construct(Geometry $geometry)
     {
