@@ -2,12 +2,11 @@
 
 namespace Moorper\GeoJson\Tests\Geometries;
 
-use Moorper\GeoJson\Geometries\Point;
-use Moorper\GeoJson\Tests\TestCase;
-
 require __DIR__.'/../../vendor/autoload.php';
 
-class PointTest extends TestCase
+use Moorper\GeoJson\Geometries\Point;
+
+class PointTest extends \PHPUnit\Framework\TestCase
 {
     public function test__Construct()
     {

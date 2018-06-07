@@ -2,17 +2,19 @@
 
 namespace Moorper\GeoJson;
 
+use Moorper\GeoJson\Geometries\Geometry;
+
 class Feature extends GeoJson
 {
     public $type;
     public $properties;
     public $geometry;
 
-    public function __construct(string $type, array $coordinates)
+    public function __construct(Geometry $geometry)
     {
         $this->type = 'Feature';
         $this->properties = [];
-        $this->geometry = new Geometry($type, $coordinates);
+        $this->geometry = $geometry;
     }
 
     public function jsonSerialize()
