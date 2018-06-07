@@ -16,7 +16,7 @@ class LineString extends Geometry
                 throw new \Exception('coordinates is invalid');
             }
         }
-        $this->coordinates[] = $coordinates;
+        $this->coordinates = $coordinates;
     }
 
     public function addCoordinate(array $coordinate): bool
