@@ -34,13 +34,10 @@ class Geometry extends GeoJson
         return false;
     }
 
-    public function toJson(): string
-    {
-        return json_encode($this);
-    }
-
     public function jsonSerialize()
     {
+        parent::jsonSerialize();
+
         $geoJson = [];
         $geoJson['type'] = $this->type;
         $geoJson['coordinates'] = $this->coordinates;

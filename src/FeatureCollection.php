@@ -2,7 +2,7 @@
 
 namespace Moorper\GeoJson;
 
-class FeatureCollection
+class FeatureCollection extends GeoJson
 {
     public $type;
     public $features;
@@ -13,8 +13,14 @@ class FeatureCollection
         $this->features = [];
     }
 
-    public function toJson(): string
+    public function jsonSerialize()
     {
-        return json_encode($this);
+        parent::jsonSerialize();
+
+        $geoJson = [];
+        $geoJson['type'] = $this->type;
+        $geoJson['features'] = $this->features;
+
+        return $geoJson;
     }
 }
