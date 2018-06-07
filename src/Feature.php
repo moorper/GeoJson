@@ -6,9 +6,9 @@ use Moorper\GeoJson\Geometries\Geometry;
 
 class Feature extends GeoJson
 {
-    public $type;
+    private $type;
     public $properties;
-    public $geometry;
+    private $geometry;
 
     public function __construct(Geometry $geometry)
     {
