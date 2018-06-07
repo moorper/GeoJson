@@ -13,12 +13,8 @@ class FeatureCollection
         $this->features = [];
     }
 
-    public function toArray(): array
+    public function toJson(): string
     {
-        $geoJson = [];
-        $geoJson['type'] = $this->type;
-        $geoJson['features'] = $this->features;
-
-        return $geoJson;
+        return json_encode($this);
     }
 }

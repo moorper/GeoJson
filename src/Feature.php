@@ -14,4 +14,9 @@ class Feature
         $this->properties = [];
         $this->geometry = new Geometry($type, $coordinates);
     }
+
+    public function toJson(): string
+    {
+        return json_encode($this);
+    }
 }
